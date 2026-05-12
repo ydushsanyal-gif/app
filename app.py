@@ -1,22 +1,9 @@
-from flask import Flask,render_template
+from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template("index.html")
-
-@app.route('/about')
-def about():
-    return "welcome to about page"  
-@app.route('/dashboard') 
-def dashboard():
-    return "Represents your dashboard"
-@app.route('/services')
-def services():
-    return " Offers code flexibility"
-@app.route("/contact")
-def contact ():
-    return " contact number - 1234567890"
+    return "Cloud Intern Task Running"
 
 
 
@@ -28,4 +15,4 @@ def contact ():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=5000)
